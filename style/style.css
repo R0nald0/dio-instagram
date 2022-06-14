@@ -5,16 +5,37 @@
     font-size: 14px;
     font-family: sans-serif;
 }
-
 body{
     width: 100%;
     min-height: 100vh;
     background-color: rgb(243, 243, 243);
     padding: 0;
     margin: 0;
-    justify-content: center;
+    align-items: center;
     display: flex;
+    flex-direction: column;
 }
+
+header{
+    background-color: rgb(102, 65, 65);
+    color: white;
+    height: 10vh;
+    width: 100%;
+}
+
+.instagram-header{
+    direction: flex;
+    width: 80%;
+    margin: auto;
+}
+.flex-container{
+    margin-top: 15px;
+}
+.instagram-header h1{
+    font-size: 40px;
+    font-family: serif;
+}
+
 .instagram-wrapper{
    justify-content: start;
    display: flex;
@@ -38,6 +59,7 @@ body{
    flex-direction:column;
    display: flex;
    width: 50%; 
+   height: 3px;
    min-height: 34rem;
 }
 
@@ -49,16 +71,16 @@ body{
   display: flex;
   width: 100%;
   border: 1px solid lightgray;
-  padding: 1.3rem 0;
-  
+  padding: 1.0rem 0;
+  margin-top: 1rem;
 }
 
 .group:nth-child(1) {
-    min-height: 19rem;
+    min-height: 20rem;
 }
 
 .instagram-logo{
-    height: 3rem;
+    height: 10rem;
 }
 
 .perfil-photo{
@@ -67,4 +89,87 @@ body{
  border-radius:50% ;
  display: flex;
  overflow: hidden;
+}
+
+.instagram-login{
+    background-color:  #0095f6;
+    color: #ffff;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 12px; 
+}
+
+.instagram-logout{
+    color: #0095f6;
+}
+
+.not-acount{
+    color: rgb(160, 160, 160);
+}
+
+.link-blue{
+    color: blue;
+}
+
+.get-the-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.get-app{
+   font-weight: 700;
+}
+
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download{
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1){
+    background-image: url('/curso-dio-full_stack/dio-instagram/imagens/apple-button.png');
+}
+
+.app-download:nth-child(2){
+    background-image: url('/curso-dio-full_stack/dio-instagram/imagens/googleplay-button.png');
+}
+
+
+/*MEDIA QUERYS */
+
+@media (max-width: 1024px){
+
+    .instagram-wrapper{
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    
+   .instagram-wrapper{
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   .download{
+    display: flex;
+    flex-direction: column;
+
+   }
+
+   
+
 }
